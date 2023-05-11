@@ -59,7 +59,7 @@ export function Weather() {
     if (fromStorage) {
       return JSON.parse(fromStorage);
     }
-    return null;
+    return [];
   });
 
   const handleAddFavorite = () => {
@@ -91,7 +91,7 @@ export function Weather() {
         className={clsx(
           styles.day,
           {
-            [styles.night]: !(currentHour >= 7 && currentHour < 20),
+            [styles.night]: !(currentHour >= 6 && currentHour < 20),
           },
           styles.weather
         )}
